@@ -6,6 +6,10 @@ This project is made with bootstrap css libarary with ReactJS as a UI framework,
 
 Clone the project, change into the directory and install the dependencies.
 
+```bash
+cd employee-app
+npm install
+```
 ## Using this project
 
 Run the React application on its own with the command:

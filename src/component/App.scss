@@ -1,0 +1,442 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/react-select/scss/select";
+@import "../../node_modules/react-select/scss/default";
+
+.icon-image a img {
+    width: 50px;
+    height: 50px;
+}
+// media query
+@media (max-width: 768px) {
+    .masthead .container .content div.login-container {
+        width: 80%
+    }
+}
+
+@media (max-width: 650px) {
+    div.user-section {
+        ul.menu-option {
+            left: -80px;
+        }
+    }
+    div.container {
+        .row {
+            margin-left: 5px;
+        }
+    }
+    nav.navbar {
+        padding-left: 45px;
+    }
+    .modal-container {
+        width: 95%;
+        left: 2%;
+        .form-group {
+            margin: 30px 0px;
+        }
+    }
+}
+@media (max-width: 550px) {
+    div.user-section {
+        ul.menu-option {
+            left: -90px;
+        }
+    }
+    div.container {
+        .row {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    .navbar .container div.user-section {
+        right: 20px
+    }
+    .masthead .container .content div.menu-item {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 450px) {
+    .masthead .container .content div.login-container {
+        width: 90%;
+        padding: 0px 10px;
+    }
+    .navbar-collapse {
+        position: relative;
+        left:-75px;
+    }
+}
+
+@media (max-width: 400px) {
+    .masthead .container .content div.login-container {
+        width: 100%
+    }
+    .brand-name {
+        display: none;
+    }
+}
+// nav bar
+.navbar {
+    .container {
+        .icon-image a img {
+            width: 50px;
+            height: 50px;
+        }
+        .user-section {
+            margin-left: 10px;
+            right: 40px;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            box-shadow: #fff 1px 1px 8px;
+            border: 2px solid;
+            border-radius: 50%;
+            ul.menu-option {
+                z-index: 1000;
+                line-height: 18px;
+                top: 33px;
+                left: -57px;
+                width: 141px;
+                padding: 5px;
+                margin: 0;
+                list-style: none;
+                position: absolute;
+                border: 1px solid #ddd;
+                box-shadow: 1px 2px 5px 0 #999;
+                background-color: #fff;
+                border-radius: 0 0 3px 3px;
+                color: #1c2e48;
+                text-transform: none;
+                font-size: 12px;
+
+                li {
+                    list-style: none;
+                }
+                li:hover {
+                    text-decoration: underline;
+                }
+                li.separator {
+                    height: 1px;
+                    margin: 5px 1px;
+                    overflow: hidden;
+                    border-bottom: 1px solid #ddd;
+                }
+            }
+
+        }
+
+        .user-section:hover {
+            color: #18bc9c;
+        }
+
+        .collapse.show{
+            position: absolute;
+            top: 76px;
+            background: #1c2e48;
+            left: 0px;
+            width: 100%;
+            padding-left: 10px;
+            border-bottom: 1px solid #fff;
+        }
+
+        .navbar-collapse {
+            position: relative;
+            left:-75px;
+        }
+    }
+}
+
+
+//  common css
+
+.alert-notification {
+    color: #ffe5a0;
+}
+.disable-notification {
+    color: #a3afbd;
+}
+
+.icon-button {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.icon-button:hover{
+    cursor: pointer;
+    color: #18BC9C;
+}
+.disable-notification {
+    .icon-button:hover{
+        cursor: revert;
+        color: #a3afbd;
+    }
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.6);
+}
+.modal-container {
+    position: absolute;
+    width: 50%;
+    background: #ffffff;
+    left: 25%;
+    top: 30%;
+    //padding: 20px;
+    color:#000;
+
+    h1, h2, h3, h4, h5, h6 {
+        text-transform: none;
+    }
+    .modal-field {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+
+        input, select {
+            font-size: 16px;
+        }
+        select {
+            cursor: pointer;
+        }
+    }
+    .modal-close {
+        text-align: end;
+        position: relative;
+        top: -1px;
+        right: 6px;
+        cursor: pointer;
+        font-size: 20px;
+        z-index: 100;
+    }
+    .modal-head {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        background: #EDF5F7;
+        color: #454B4D;
+        font-size: 16px;
+
+        h4 {
+            font-size: 20px;
+        }
+    }
+    .form-group {
+        margin: 20px 0px;
+    }
+}
+
+input.selection {
+    cursor: pointer;
+}
+
+
+input.selection:disabled {
+    background: #169c4e;
+}
+input[type="checkbox"]:disabled
+{
+    color:#ccc;
+}
+input[type="checkbox"]:disabled + label::before{
+    background: #169c4e;
+}
+input[type="checkbox"]:disabled + label:hover::before{
+    background: #169c4e;
+    border: 1px solid #d4d4d5;
+}
+
+.svg-icon {
+    width: 1em;
+    height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+    fill: #4691f6;
+}
+
+
+// main container section
+.masthead {
+    min-height: 444px;
+    padding-top: 85px !important;
+    .container {
+        .icon-image a img {
+            width: 50px;
+            height: 50px;
+        }
+        a {
+            cursor: pointer;
+            color: #fff;
+        }
+        a:hover {
+            color: #007bff;
+        }
+        .content {
+            .menu-item-section {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: #fff;
+                border-bottom: 1px solid #ced4da;
+                padding: 5px;
+                text-align: left;
+                width: 100%;
+                //border-radius: 5px;
+                //background: #1c2e48;
+                .separator {
+                    border-right: 1px solid;
+                    margin-right: 10px;
+                    padding-right: 10px;
+                }
+                .menu-item {
+                    select {
+                        width: 190px;
+                    }
+                    input {
+                        width: 190px;
+                    }
+                }
+            }
+
+            .table-block {
+                overflow-y: scroll;
+                box-shadow: #334b4a 0px 19px 38px, #334b4a 0px 15px 12px;
+                .table {
+                    margin-bottom: 0px;
+                }
+            }
+
+            div.user-option-block:hover {
+                background-color: #384d61;
+            }
+            div.user-option-block {
+                height: 250px;
+                width: 250px;
+                margin-bottom: 35px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px 10px;
+                background-color: #1c2e48;
+                color: #fff;
+                border: 1px solid #a3afbd;
+                border-radius: 14px;
+                cursor: pointer;
+                box-shadow: #334b4a 0px 19px 38px, #334b4a 0px 15px 12px;
+
+                h1, h2, h3, h4, h5, h6 {
+                    text-transform: none;
+                }
+                div.option-section i {
+                    color: #ffe5a0;
+                }
+                div.option-section:first-child {
+                    margin-bottom: 30px;
+                }
+                div.option-section:nth-child(2) {
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                }
+                div.option-section:last-child {
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                }
+            }
+            .menu-item{
+                width: 200px;
+                float: left;
+                cursor: pointer;
+                margin:0px 20px 0px 0px;
+
+                select {
+                    cursor: pointer;
+                }
+                .icon-menu {
+                    margin-right: 10px;
+                }
+            }
+            //.menu-item:hover{
+            //    background-color: #384d61;
+            //}
+
+            .heading {
+                margin: 15px;
+                width: 100%;
+                text-align: center;
+                h1, h2, h3, h4, h5, h6 {
+                    text-transform: none;
+                }
+            }
+            .login-container {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #1c2e48;;
+                border-radius: 15px;
+                padding: 0px 40px;
+                box-shadow: #334b4a 0px 19px 38px, #334b4a 0px 15px 12px;
+
+                .login-form {
+                    width:100%
+                }
+                .container-fields {
+                    width: 100%;
+                    margin: 15px 0px;
+
+                    .label-input {
+                        display: block;
+                    }
+                    .submit-button-field {
+                        color: #fff;
+                        border: none;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        background: transparent;
+                        cursor: pointer;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    .input-field {
+                        color: rgb(0, 34, 114);
+                        font-size: 1.2rem;
+                        height: 50px;
+                        padding-left: 20px;
+                        width: 250px;
+                        background: rgb(255, 255, 255);
+                        border-width: 0px;
+                        border-style: initial;
+                        border-color: initial;
+                        border-image: initial;
+                        border-radius: 10px;
+
+                        &:focus {
+                            border-width: 1px;
+                            border-style: solid;
+                            border-color: #2684FF;
+                            border-image: initial;
+                            outline: none;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+// footer section
+
+footer {
+    .footer-above {
+        padding-top: 20px;
+        .container {
+            h3 {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
