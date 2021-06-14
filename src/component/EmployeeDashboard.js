@@ -191,7 +191,7 @@ class EmployeeDashboard extends React.Component {
                 </table>
             </div>}
             <PopOverModal show={showAddUserModal} handleClose={e => this.modalClose(e)}>
-                <div className="modal-head"><h4>{isEditMode ? <span>Edit</span> : <span>Add new</span>} employee</h4></div>
+                <div className="modal-head"><h4>{isEditMode ? <span>Edit</span> : <span>Add new</span>} employee !</h4></div>
                 <div className="form-group">
                     <div className="modal-field">
                         <input type="text" placeholder="enter name" className="form-control" value={userName} onChange={this.handleNameChange}/>

@@ -46,7 +46,7 @@ class ReviewsDashboard extends React.Component {
                 <div className='heading'><h4 className="">Welcome to performance review dashboard</h4></div>
             </div>
             <div className="row">
-                <div className='heading'><h5 className="">Performance review submitted for below employees</h5></div>
+                <div className='heading'><h5 className="">Employees performance review will appear below, if submitted </h5></div>
             </div>
             {reviewList.length > 0 && <div className="row table-block">
                 <table className="table table-hover table-dark">

@@ -102,7 +102,7 @@ class AssignEmployeeDashboard extends React.Component {
                     <div className='heading'><h4 className="">Welcome to employee's performance review dashboard</h4></div>
                 </div>
                 <div className="row">
-                    <div className='heading'><h5 className="">All employees for same team will be grouped for performance review</h5></div>
+                    <div className='heading'><h5 className="">All employees for the same team will be grouped for performance review</h5></div>
                 </div>
 
                 <div className="row">
@@ -139,7 +139,7 @@ class AssignEmployeeDashboard extends React.Component {
                 </div>}
 
                 <PopOverModal show={showConfirmModal} handleClose={e => this.modalConfirmClose(e)}>
-                    <div className="modal-head"><h4>Adding performance review grouping</h4></div>
+                    <div className="modal-head"><h4>Adding performance review grouping !</h4></div>
                     <div className="form-group">
                         <div>
                             <h6>Confirm grouping for team: {team}</h6>

@@ -128,13 +128,13 @@ class PerformanceDashboard extends React.Component {
                 <div className='heading'><h4 className="">Welcome to Performance feedback dashboard</h4></div>
             </div>
 
-            <div className="row">
+            {empListForFeedback.length > 0 && <div className="row">
                 <div className='heading'><h5 className="">Pending review for below list of employees</h5></div>
                 <div className='menu-item-section '>
                     <span className="separator">Feedback pending: <i className='alert-notification fa fa-bell '></i></span>&nbsp;
                     <span className="">Feedback submitted: <i className='disable-notification fa fa-bell '></i></span>
                 </div>
-            </div>
+            </div>}
 
             {empListForFeedback.length > 0 && <div className="row table-block">
                 <table className="table table-hover table-dark">
