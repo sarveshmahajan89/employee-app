@@ -1,9 +1,8 @@
 import React from "react";
 
-class Footer  extends React.Component {
+class Footer extends React.Component {
     render() {
-        return (
-            <footer className="text-center">
+        return (<footer className="text-center">
                 <div className="footer-above">
                     <div className="container">
                         <div className="row">
@@ -23,8 +22,8 @@ class Footer  extends React.Component {
                         </div>
                     </div>
                 </div>
-            </footer>
-        );
+            </footer>);
     }
 }
-export default Footer ;
+
+export default Footer;

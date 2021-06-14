@@ -5,11 +5,20 @@ This project is made with ReactJs as a UI framework, bootstrap css library, Expr
 
 ## Application features
 
+- #### Login
+    - An employee with a respective role needs an individual login credential to perform operational tasks.
+    - For simplicity, Employee ID as its password, for eg: a newly created employee having Employee ID: emp-101 (Auto Generated field), and Password:  emp-101 (same as Employee ID).
+    - Sample list of Employees :
+        - Name: Sarvesh Mahajan, role: admin, Emp-id: emp-101, password: emp-101
+        - Name: Minato, role: employee, Emp-id: emp-102, password: emp-102
+        - Name: Nobuaki Momoi, role: employee, Emp-id: emp-103, password: emp-103
+
+    
 - #### Admin view 
     - Add/remove/update/view employees.
     - view performance reviews.
     - Assign employees within team to participate in another employee's performance review.
-    
+    - emp-101
 - #### Employee view 
     - List of employees performance reviews requiring feedback.
     - Submitting feedback.
@@ -33,7 +42,6 @@ npm run start
 Run the API server on its own with the command:
 
 ```bash
-npm run server
 npm run server
 ```
 
