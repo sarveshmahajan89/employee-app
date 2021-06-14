@@ -2,6 +2,7 @@ import React from "react";
 import Toast from 'light-toast';
 import axios from 'axios'
 import { Redirect } from "react-router-dom";
+import common from "./common";
 
 class Login extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class Login extends React.Component {
             return;
         }
 
-        const url = 'http://localhost:3000/login';
+        const url = common.urls.login;
         axios.post(url, JSON.stringify({ id: this.state.userId, password: this.state.password }))
             .then(response => {
                 if(response.data.status === 'success') {

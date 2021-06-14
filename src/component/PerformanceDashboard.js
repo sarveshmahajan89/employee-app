@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios/index";
 import Toast from "light-toast/dist/index";
 import PopOverModal from "./PopOverModal.js"
+import common from "./common";
 
 class PerformanceDashboard extends React.Component {
     constructor(props) {
@@ -39,7 +40,7 @@ class PerformanceDashboard extends React.Component {
 
     submitFeedback = () => {
         if(this.state.comment.length > 0 && this.state.rating !== '' ) {
-            const url = 'http://localhost:3000/add_review',
+            const url = common.urls.add_review,
                 data = JSON.stringify({ name: this.state.selectedEmpName, id: this.state.selectedEmpId, provider: this.props.LoggedInUser.name+'-'+this.props.LoggedInUser.id, feedback: { comment: this.state.comment, rating: this.state.rating} });
             axios.post(url, data)
                 .then(response => {
@@ -70,7 +71,7 @@ class PerformanceDashboard extends React.Component {
     };
 
     getTeamList() {
-        const url = `http://localhost:3000/team_group?team=${this.props.LoggedInUser.team}`;
+        const url = common.urls.team_group+this.props.LoggedInUser.team;
         axios.get(url)
             .then(response => {
                 if(response.data.status === 'success') {
@@ -88,7 +89,7 @@ class PerformanceDashboard extends React.Component {
     }
     componentDidMount() {
 
-        const url = 'http://localhost:3000/review?provider='+this.props.LoggedInUser.name+'-'+this.props.LoggedInUser.id;
+        const url = common.urls.reviewProvider+this.props.LoggedInUser.name+'-'+this.props.LoggedInUser.id;
         axios.get(url)
             .then(response => {
                 if(response.data.status === 'success') {

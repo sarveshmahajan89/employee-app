@@ -172,7 +172,7 @@ app.get("/employees", async (request, response) => {
         response.status(500).send(error);
     }
 });
-app.get("/id", async (request, response) => {
+app.get("/last-id", async (request, response) => {
     let lastAddedEmployee = await empModel.find().limit(1).sort({$natural:-1}),
         nextId;
     if (lastAddedEmployee.length > 0) {

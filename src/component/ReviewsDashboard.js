@@ -1,7 +1,7 @@
 import React from "react";
 import Toast from "light-toast/dist/index";
 import axios from "axios/index";
-
+import common from "./common";
 
 class ReviewsDashboard extends React.Component {
     constructor(props) {
@@ -15,7 +15,7 @@ class ReviewsDashboard extends React.Component {
 
 
     componentDidMount() {
-        const url = 'http://localhost:3000/review';
+        const url = common.urls.review;
         axios.get(url)
             .then(response => {
                 if(response.data.status === 'success') {

@@ -6,7 +6,7 @@ import ReviewsDashboard from "./ReviewsDashboard.js"
 import AssignEmployeeDashboard from "./AssignEmployeeDashboard.js"
 import PerformanceDashboard from "./PerformanceDashboard.js"
 import Contact from "./Contact.js"
-
+import common from "./common";
 import { Switch, Route } from 'react-router-dom';
 import axios from "axios/index";
 import Toast from "light-toast/dist/index";
@@ -27,7 +27,7 @@ class Router  extends React.Component {
         this.setState({ employeeList: employees });
     }
     componentDidMount() {
-        const url = 'http://localhost:3000/employees';
+        const url = common.urls.getEmployees;
         axios.get(url)
             .then(response => {
                 if(response.data.length > 0) {

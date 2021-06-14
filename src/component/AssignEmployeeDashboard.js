@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios/index";
 import Toast from "light-toast/dist/index";
 import PopOverModal from "./PopOverModal.js"
+import common from "./common";
 
 class AssignEmployeeDashboard extends React.Component {
     constructor(props) {
@@ -28,7 +29,7 @@ class AssignEmployeeDashboard extends React.Component {
     };
     handleTeamChange = e => {
         this.setState({ team: e.target.value, checkBoxObj: {} });
-        const url = `http://localhost:3000/team_group?team=${e.target.value}`;
+        const url = common.urls.team_group+e.target.value;
         axios.get(url)
             .then(response => {
                 if(response.data.status === 'success') {
@@ -61,7 +62,7 @@ class AssignEmployeeDashboard extends React.Component {
                 empGroupList.push({id: item.id, name: item.name});
             });
             console.log(empGroupList);
-            const url = 'http://localhost:3000/add_group',
+            const url = common.urls.add_group,
                 data = JSON.stringify({ team: this.state.team, employees: empGroupList, active: true });
             axios.post(url, data)
                 .then(response => {

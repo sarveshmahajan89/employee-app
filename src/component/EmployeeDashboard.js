@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios/index";
 import Toast from "light-toast/dist/index";
 import PopOverModal from "./PopOverModal.js"
+import common from "./common";
+
 
 class EmployeeDashboard extends React.Component {
     constructor(props) {
@@ -49,7 +51,7 @@ class EmployeeDashboard extends React.Component {
         console.log(item);
     };
     removeUser = (e) => {
-        const url = 'http://localhost:3000/delete_employee',
+        const url = common.urls.delete_employee,
             data = JSON.stringify({ name: this.state.userName, id: this.state.empId });
         axios.post(url, data)
             .then(response => {
@@ -71,7 +73,7 @@ class EmployeeDashboard extends React.Component {
     };
     showAddUserModal = (e) => {
         this.setState({ showAddUserModal: true, isEditMode: false }, ()=> {
-            const url = 'http://localhost:3000/id';
+            const url = common.urls.get_last_id;
             axios.get(url)
                 .then(response => {
                     if(response.data.length > 0) {
@@ -95,7 +97,7 @@ class EmployeeDashboard extends React.Component {
         if(this.state.userName.length > 0 && this.state.role !== '' && this.state.team !== '') {
 
             if(this.state.isEditMode) {
-                const url = 'http://localhost:3000/update_employee',
+                const url = common.urls.update_employee,
                     data= JSON.stringify({ name: this.state.userName, id: this.state.empId, role: this.state.role, team: this.state.team });
 
                 axios.post(url, data)
@@ -116,7 +118,7 @@ class EmployeeDashboard extends React.Component {
                 });
             }
             else {
-                const url = 'http://localhost:3000/add_employee',
+                const url = common.urls.add_employee,
                     data= JSON.stringify({ name: this.state.userName, id: this.state.empId, role: this.state.role, team: this.state.team });
                 axios.post(url, data)
                     .then(response => {
