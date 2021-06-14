@@ -1,4 +1,4 @@
-# Employee Feedback application uisng MERN stack
+# Employee Feedback application using MERN stack
 
 This application allows employees to submit feedback toward each other's performance review.
 This project is made with ReactJs as a UI framework, bootstrap css library, ExpressJs for API service with Nodejs as server side serving for API calls management, and mongodb for database.
