@@ -9,9 +9,10 @@
     width: 50px;
     height: 50px;
 }
+
 // media query
 @media (max-width: 992px) {
-    .navbar .container div.collapse.show{
+    .navbar .container div.collapse.show {
         position: absolute;
         top: 76px;
         background: #1c2e48;
@@ -21,6 +22,7 @@
         border-bottom: 1px solid #fff;
     }
 }
+
 @media (max-width: 768px) {
     .masthead .container .content div.login-container {
         width: 80%
@@ -52,6 +54,7 @@
         overflow-x: scroll;
     }
 }
+
 @media (max-width: 550px) {
     div.user-section {
         ul.menu-option {
@@ -71,6 +74,7 @@
         margin-bottom: 10px;
     }
 }
+
 @media (max-width: 450px) {
     .masthead .container .content div.login-container {
         width: 90%;
@@ -78,7 +82,7 @@
     }
     .navbar-collapse {
         position: relative;
-        left:-75px;
+        left: -75px;
     }
 }
 
@@ -90,6 +94,7 @@
         display: none;
     }
 }
+
 // nav bar
 .navbar {
     .container {
@@ -146,17 +151,17 @@
 
         .navbar-collapse {
             position: relative;
-            left:-75px;
+            left: -75px;
         }
     }
 }
-
 
 //  common css
 
 .alert-notification {
     color: #ffe5a0;
 }
+
 .disable-notification {
     color: #a3afbd;
 }
@@ -166,12 +171,13 @@
     font-size: 20px;
 }
 
-.icon-button:hover{
+.icon-button:hover {
     cursor: pointer;
     color: #18BC9C;
 }
+
 .disable-notification {
-    .icon-button:hover{
+    .icon-button:hover {
         cursor: revert;
         color: #a3afbd;
     }
@@ -180,6 +186,7 @@
 .modal {
     background: rgba(0, 0, 0, 0.6);
 }
+
 .modal-container {
     position: absolute;
     width: 50%;
@@ -187,7 +194,7 @@
     left: 25%;
     top: 30%;
     //padding: 20px;
-    color:#000;
+    color: #000;
 
     h1, h2, h3, h4, h5, h6 {
         text-transform: none;
@@ -235,18 +242,19 @@ input.selection {
     cursor: pointer;
 }
 
-
 input.selection:disabled {
     background: #169c4e;
 }
-input[type="checkbox"]:disabled
-{
-    color:#ccc;
+
+input[type="checkbox"]:disabled {
+    color: #ccc;
 }
-input[type="checkbox"]:disabled + label::before{
+
+input[type="checkbox"]:disabled + label::before {
     background: #169c4e;
 }
-input[type="checkbox"]:disabled + label:hover::before{
+
+input[type="checkbox"]:disabled + label:hover::before {
     background: #169c4e;
     border: 1px solid #d4d4d5;
 }
@@ -261,7 +269,6 @@ input[type="checkbox"]:disabled + label:hover::before{
 .svg-icon rect {
     fill: #4691f6;
 }
-
 
 // main container section
 .masthead {
@@ -288,8 +295,6 @@ input[type="checkbox"]:disabled + label:hover::before{
                 padding: 5px;
                 text-align: left;
                 width: 100%;
-                //border-radius: 5px;
-                //background: #1c2e48;
                 .separator {
                     border-right: 1px solid;
                     margin-right: 10px;
@@ -347,11 +352,11 @@ input[type="checkbox"]:disabled + label:hover::before{
                     margin-bottom: 30px;
                 }
             }
-            .menu-item{
+            .menu-item {
                 width: 200px;
                 float: left;
                 cursor: pointer;
-                margin:0px 20px 0px 0px;
+                margin: 0px 20px 0px 0px;
 
                 select {
                     cursor: pointer;
@@ -360,9 +365,6 @@ input[type="checkbox"]:disabled + label:hover::before{
                     margin-right: 10px;
                 }
             }
-            //.menu-item:hover{
-            //    background-color: #384d61;
-            //}
 
             .heading {
                 margin: 15px;
@@ -382,7 +384,7 @@ input[type="checkbox"]:disabled + label:hover::before{
                 box-shadow: #334b4a 0px 19px 38px, #334b4a 0px 15px 12px;
 
                 .login-form {
-                    width:100%
+                    width: 100%
                 }
                 .container-fields {
                     width: 100%;

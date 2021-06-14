@@ -10,7 +10,7 @@ const common = {
         add_review: baseUrl + '/add_review',
         reviewProvider: baseUrl + '/review?provider=',
         delete_employee: baseUrl + '/delete_employee',
-        get_last_id: baseUrl + '/last-id',
+        get_last_id: baseUrl + '/next-id',
         update_employee: baseUrl + '/update_employee',
         add_employee: baseUrl + '/add_employee',
         review: baseUrl + '/review',
