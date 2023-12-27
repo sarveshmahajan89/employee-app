@@ -16,7 +16,7 @@
   },
   "proxy": "http://localhost:8080",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.6.3",
     "bootstrap": "4.0.0-beta.3",
     "express-pino-logger": "^4.0.0",
     "font-awesome": "4.7.0",
